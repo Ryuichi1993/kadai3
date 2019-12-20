@@ -1,0 +1,31 @@
+<%= render 'users/header', user: @user %>
+
+
+<%= render 'users/userinfo', book: @book %>
+
+
+
+<div class="col-xs-9">
+	<h2>Users</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>image</th>
+					<th>name</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+			<% @users.each do |user| %>
+			<tbody>
+				<tr>
+					<th><%= attachment_image_tag user, :profile_image, size:"40x40", fallback: "no_iamge.jpg" %></th>
+					<th><%= user.name %></th>
+					<th><%= link_to user_path(user) do %>
+						<span class="text-muted">Show</span><% end %></th>
+				</tr>
+			</tbody>
+			<% end %>
+		</table>
+</div>
+</div>
+</div>
