@@ -1,5 +1,5 @@
 <nav class="navbar navbar-fixed-top navbar-inverse">
-	<div class="container fluid">
+	<div class="container-fluid">
         <div class="nav navbar-nav navbar-left">
 			<span class=" h3 text-muted">Bookers</span>
 		</div>
@@ -28,10 +28,9 @@
 	</div>
 </nav>
 <div class="container">
-	<p id="notice"></p>
 <div class="row">
 <div class="col-xs-3">
-	<h1>user info</h1>
+	<h1>User info</h1>
 		<table class="table">
 			<tr><%= attachment_image_tag book.user, :profile_image, size:"100x100", fallback: "no_iamge.jpg" %></tr>
 			<tr>
@@ -45,7 +44,19 @@
 			</tr>
 		</table>
 
-		<button type="button" class="btn btn-default btn-block">
-		<%= link_to edit_user_path(current_user.id) do %>
-		<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-		</button><% end %>
+		
+		<%= link_to edit_user_path(book.user), class:'btn btn-primary btn-block' do %>
+			
+				<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+		<% end %>
+
+
+
+
+
+
+
+
+
+
+

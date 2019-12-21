@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  root :to => 'home#index'
 
-get 'home_about', to: 'home#new'
+get 'home/about', to: 'home#new'
 
 
 devise_for :users, controllers: {

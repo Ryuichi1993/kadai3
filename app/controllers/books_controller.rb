@@ -27,12 +27,13 @@ def create
 end
 
 def destroy
-	@book = Book.find(book_params)
-	if @book.destroy
+	if @book = Book.find(params[:id])
+	   @book.user_id == current_user.id
+	   @book.destroy
 	   flash[:notice] = "Book was successfully destroyed."
-	   redirect_to book_path(@book.id)
-	else 
-		render :iedit
+	   redirect_to books_path(@book.id)
+	else
+	   render :edit
 	end
 end
 
@@ -46,7 +47,7 @@ def update
 	@book = Book.find(params[:id])
 	if @book.update(book_params)
 	   flash[:notice] = "Book was successfully updated."
-	   redirect_to book_path(@book.id)
+	   redirect_to book_path
 	else
 	   render :edit
 	end

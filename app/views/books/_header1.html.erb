@@ -1,5 +1,5 @@
 <header class="navbar navbar-fixed-top w-100 navbar-inverse">
-	<div class="container fluid">
+	<div class="container">
         <nav class="nav navbar-nav navbar-left">
 			<span class=" h3 text-muted">Bookers</span>
 		</nav>
@@ -46,8 +46,3 @@
 				<th><%= current_user.introduction %></th>
 			</tr>
 		</table>
-
-		<button type="button" class="btn btn-default btn-block">
-		<%= link_to edit_user_path(current_user.id) do %>
-		<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-		</button><% end %>

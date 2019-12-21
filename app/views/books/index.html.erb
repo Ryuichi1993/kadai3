@@ -1,5 +1,10 @@
 <%= render 'books/header1', user: @user %>
 
+		
+		<%= link_to edit_user_path(current_user.id), class:'btn btn-primary btn-block' do %>
+		<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+		<% end %>
+
 <%= render 'books/userinfo1', book: @book %>
 	<div class="col-xs-9">
 		<h1>Books</h1>
@@ -31,5 +36,5 @@
 </div>
 
 
-
+<%= render 'users/footer' %>
 
